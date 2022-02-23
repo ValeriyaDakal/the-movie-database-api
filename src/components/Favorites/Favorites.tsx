@@ -7,8 +7,8 @@ interface FavoritesProps { }
 
 const Favorites: FC<FavoritesProps> = () => {
   const favorites = useSelector((state: any) => state?.movies.favorites);
-  
-  useEffect(() => {}, [])
+
+  useEffect(() => { }, [])
   return (
     <div className={styles.Favorites}>
       {favorites.length ? favorites.map((movie: any) => {

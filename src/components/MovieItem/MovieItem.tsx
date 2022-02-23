@@ -27,24 +27,24 @@ const MovieItem: FC<MovieItemProps> = (props: any) => {
     date
   } = props;
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleAddtoFavourites = () => {
     toggleToFavorites(props)
     dispatch(toggleToFavorites(props));
     handleToggle()
   };
-  
-const [isActive, setActive] = useState(false);
-const handleToggle = () => {
-  setActive(!isActive);
-};
+
+  const [isActive, setActive] = useState(false);
+  const handleToggle = () => {
+    setActive(!isActive);
+  };
 
   return (
     <div className={styles.wrapper}>
       <Link to={`movies/${id}`}>
         <div className={styles.MovieItem}>
-          <img width={300} height={450} src={`${img == null ? "": imageUrlBase}${img == null ? "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png": img}`} alt={title} />
+          <img width={300} height={450} src={`${img == null ? "" : imageUrlBase}${img == null ? "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" : img}`} alt={title} />
           <div className={styles.info}>
             <p>{overview}</p>
           </div>
@@ -57,7 +57,7 @@ const handleToggle = () => {
           </div>
         </div>
       </Link>
-      <div className={styles.favorites} onClick={handleAddtoFavourites}>{isActive ? "★" : "☆" }</div>
+      <div className={styles.favorites} onClick={handleAddtoFavourites}>{isActive ? "★" : "☆"}</div>
     </div>
   );
 }

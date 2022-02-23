@@ -34,7 +34,7 @@ const MoviesList: FC<MoviesListProps> = () => {
   }, [results, searchResults]);
 
   useEffect(() => {
-    dispatch(receiweMoreMovies({query, page}));
+    dispatch(receiweMoreMovies({ query, page }));
     dispatch(fetchMoviesList(page));
   }, [page]);
 
@@ -44,7 +44,7 @@ const MoviesList: FC<MoviesListProps> = () => {
       return;
     };
 
-    setHasMorePages (totalPages > page);
+    setHasMorePages(totalPages > page);
   }, [totalPages, searchTotalPages]);
 
   const receiveMoreFilms = () => {
