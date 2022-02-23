@@ -1,0 +1,29 @@
+.MovieDescription {
+    display: flex;
+    // position: absolute;
+    color: #e6e6e6;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 400px;
+}
+
+.title {
+    text-align: center;
+    width: 400px;
+    padding: 0.5rem;
+}
+
+.image {
+    width: 400px;
+    height: 600px;
+}
+
+.tagline {
+    text-align: flex-start;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+.overview {
+    text-align: justify;
+}
